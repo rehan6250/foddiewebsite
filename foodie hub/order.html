@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Now - FoodieHub</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <h1><i class="fas fa-hamburger"></i> FoodieHub</h1>
+    <nav class="navbar">
+        <a href="home page.html"><i class="fas fa-home"></i> Home</a>
+        <a href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
+        <a href="order.html"><i class="fas fa-box"></i> Orders</a>
+        <a href="contact.html"><i class="fas fa-phone"></i> Contact Us</a>
+      </nav>
+      
+    <form class="search-form" onsubmit="return validateSearch()">
+      <input type="text" id="search-input" placeholder="Search food...">
+      <button type="submit"><i class="fas fa-search"></i> Search</button>
+    </form>
+  </header>
+
+  <section class="order-text">
+    <h2><i class="fas fa-utensils"></i> Order Now - Fresh, Fast, and Full of Flavor!</h2>
+    <p>
+      Craving something delicious? You're just a few clicks away from your favorite meals delivered straight to your doorstep.
+      At <strong>FoodieHub</strong>, we believe in serving hot meals, happy vibes, and fast delivery—every time.
+    </p>
+    <ul>
+      <li>✅ Select your favorite dishes</li>
+      <li>✅ Choose the quantity you want</li>
+      <li>✅ Sit back and relax — we’ll handle the rest!</li>
+    </ul>
+    <p>Let’s make your mealtime amazing. 😋</p>
+  </section>
+  
+  <!-- Main Order Section -->
+  <main class="menu-section">
+    <h2><i class="fas fa-box"></i> Place Your Order</h2>
+
+    <form class="order-form" onsubmit="return validateOrderForm()">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Your Name" required>
+      
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="e.g. 0300-1234567" required>
+      
+        <label for="address">Delivery Address</label>
+        <textarea id="address" rows="3" placeholder="Street, City, ZIP" required></textarea>
+      
+        <div id="items-container">
+          <div class="order-item">
+            <label>Select Item</label>
+            <select required>
+              <option value="">-- Choose an Item --</option>
+              <option>Spicy Chicken Burger</option>
+              <option>Pasta Alfredo</option>
+              <option>Tandoori Pizza</option>
+              <option>Veggie Wrap</option>
+              <option>Fries</option>
+              <option>Chocolate Shake</option>
+            </select>
+      
+            <label>Quantity</label>
+            <input type="number" min="1" value="1" required>
+          </div>
+        </div>
+      
+        <button type="button" onclick="addItem()" class="add-item-btn">
+          <i class="fas fa-plus-circle"></i> Add More Items
+        </button>
+      
+        <button type="submit" class="order-btn">
+          <i class="fas fa-paper-plane"></i> Confirm Order
+        </button>
+      
+      </form>
+      
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Your favorite meals, delivered fast!</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Search Validation -->
+  <script>
+    // Validate search bar
+    function validateSearch() {
+      const input = document.getElementById('search-input').value.trim();
+      if (input === '') {
+        alert("Please enter a food item to search.");
+        return false;
+      }
+      return true;
+    }
+  
+    // Add new item row
+    function addItem() {
+      const container = document.getElementById("items-container");
+      const newItem = document.createElement("div");
+      newItem.className = "order-item";
+      newItem.innerHTML = `
+        <label>Select Item</label>
+        <select required>
+          <option value="">-- Choose an Item --</option>
+          <option>Spicy Chicken Burger</option>
+          <option>Pasta Alfredo</option>
+          <option>Tandoori Pizza</option>
+          <option>Veggie Wrap</option>
+          <option>Fries</option>
+          <option>Chocolate Shake</option>
+        </select>
+  
+        <label>Quantity</label>
+        <input type="number" min="1" value="1" required>
+      `;
+      container.appendChild(newItem);
+    }
+  
+    // Validate order form
+    function validateOrderForm() {
+      alert("🎉 Your order has been placed successfully!");
+      return true; // allow form to be submitted if needed
+    }
+  </script>
+  
+
+</body>
+</html>

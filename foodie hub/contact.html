@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | FoodieHub</title>
+  <link rel="stylesheet" href="css.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ✅ Header -->
+  <header class="header">
+    <h1><i class="fas fa-hamburger"></i> FoodieHub</h1>
+    <nav class="navbar">
+        <a href="home page.html"><i class="fas fa-home"></i> Home</a>
+        <a href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
+        <a href="order.html"><i class="fas fa-box"></i> Orders</a>
+        <a href="contact.html"><i class="fas fa-phone"></i> Contact Us</a>
+      </nav>
+      
+    <form class="search-form" onsubmit="return validateSearch()">
+      <input type="text" id="search-input" placeholder="Search food...">
+      <button type="submit"><i class="fas fa-search"></i> Search</button>
+    </form>
+  </header>
+
+  <!-- ✅ Contact Content -->
+  <main class="contact-section">
+    <section class="contact-info">
+      <h2><i class="fas fa-envelope-open-text"></i> Get in Touch</h2>
+      <p>Have a question, feedback, or just want to say hello? We're here to help!</p>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> 123 Food Street, Tasty Town, FL 32100</li>
+        <li><i class="fas fa-phone"></i> +1 (800) 123-4567</li>
+        <li><i class="fas fa-envelope"></i> support@foodiehub.com</li>
+      </ul>
+    </section>
+
+    <section class="contact-form">
+      <h3><i class="fas fa-comment-dots"></i> Send Us a Message</h3>
+      <form>
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message..." required></textarea>
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>Your favorite meals, delivered fast and fresh.</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ Search Validation Script -->
+  <script>
+    function validateSearch() {
+      const input = document.getElementById('search-input').value.trim();
+      if (input === '') {
+        alert("Please enter a food item to search.");
+        return false;
+      }
+      return true;
+    }
+  </script>
+
+</body>
+</html>

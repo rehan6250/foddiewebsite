@@ -1,0 +1,446 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #fff; /* White text for contrast */
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #1f1f1f; /* Dark gray background for header */
+  padding: 30px 20px;
+  color: white;
+  text-align: center;
+  border-bottom: 3px solid #333; /* Darker border to separate the header */
+}
+
+.header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.navbar a {
+  color: #ddd; /* Light gray for text */
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+  color: #ff6347; /* Tomato color on hover */
+  transform: scale(1.1);
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #1f1f1f; /* Dark background for search bar */
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  margin: 20px auto;
+}
+
+.search-form input {
+  padding: 12px;
+  width: 80%;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  background-color: #333; /* Dark input background */
+  color: white;
+  outline: none;
+}
+
+.search-form button {
+  padding: 12px 20px;
+  background-color: #ff6347; /* Tomato red */
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.search-form button:hover {
+  background-color: #e5533d; /* Darker red on hover */
+  transform: scale(1.05);
+}
+
+/* Main Section */
+.menu-section {
+  text-align: center;
+  padding: 40px 10px;
+  background: linear-gradient(to right, #333, #121212); /* Dark gradient background */
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.menu-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #1f1f1f; /* Dark card background */
+  width: 220px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.card img:hover {
+  transform: scale(1.05); /* Zoom effect */
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.card p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #bbb; /* Lighter gray text */
+}
+
+.card button {
+  background-color: #ff6347; /* Tomato red */
+  border: none;
+  color: white;
+  padding: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.card button:hover {
+  background-color: #e5533d;
+  transform: scale(1.05);
+}
+.brand-message {
+  background: linear-gradient(to right, #1e1e1e, #2c2c2c);
+  border-left: 5px solid #facc15;
+  color: #f0f0f0;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.3);
+  text-align: center;
+}
+.brand-message i {
+  color: #facc15;
+  margin-right: 0.4rem;
+}
+.homepage-intro {
+  background: linear-gradient(to right, #121212, #1f1f1f);
+  color: #e0e0e0;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255, 145, 77, 0.1);
+}
+
+.homepage-intro h2 {
+  font-size: 2rem;
+  color: #ff914d;
+  margin-bottom: 1rem;
+}
+
+.homepage-intro .highlight {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #facc15;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.order-form {
+  max-width: 500px;
+  margin: auto;
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 145, 77, 0.1);
+  color: #f0f0f0;
+}
+
+.order-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #facc15;
+}
+
+.order-form input,
+.order-form textarea,
+.order-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
+.order-form input:focus,
+.order-form textarea:focus,
+.order-form select:focus {
+  outline: 2px solid #ff914d;
+}
+
+.order-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff914d;
+  color: #1a1a1a;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+  background-color: #e67e3d;
+}
+.order-text {
+  color: #fff;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+.order-text h2 {
+  color: #facc15;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.order-text p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.order-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.order-text li {
+  margin: 6px 0;
+  font-size: 1rem;
+}
+.contact-section {
+  padding: 40px 20px;
+  color: #fff;
+  background-color: #121212;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.contact-info h2,
+.contact-form h3 {
+  color: #facc15;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.contact-info li i {
+  color: #ff6f61;
+  margin-right: 8px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #facc15;
+}
+
+.contact-form button {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #e5533d;
+}
+
+
+/* Footer Section */
+.footer {
+  background-color: #1f1f1f; /* Dark footer background */
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 40px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer p {
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.footer .social-links a {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 1.5em;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #ff6347;
+  transform: scale(1.1);
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 600px) {
+  .navbar {
+      flex-direction: column;
+  }
+
+  .search-form {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .search-form input,
+  .search-form button {
+      width: 90%;
+      margin: 5px 0;
+      border-radius: 4px;
+  }
+
+  .card-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 90%;
+      margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .card-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+  }
+
+  .card {
+      width: 45%; /* Show two cards per row on large screens */
+  }
+}
